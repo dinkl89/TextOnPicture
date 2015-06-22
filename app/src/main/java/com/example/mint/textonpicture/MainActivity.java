@@ -162,8 +162,9 @@ public class MainActivity extends Activity {
     }
 
     private void saveToDisc(Bitmap bitmap){
-        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() +
-                "/PictureWithLabels";
+        final String path_name = "/PictureWithLabels";          //change it to any folder name you want
+
+        String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + path_name;
 
         File dir = new File(file_path);
         if(!dir.exists())
